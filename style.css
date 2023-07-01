@@ -125,8 +125,8 @@ article{
 .bannerText:hover{
     outline: #D35400;
     color:white;
-    
-
+    animation: scale 5s;
+    font-size:110%;
 }
 
 .bannerImage:hover{
@@ -134,5 +134,23 @@ article{
 
 }
 
+#Welcome{
+    color:#996633;
+    text-align: left;
+}
+
+#Welcome:hover{
+    animation: welcomeAnime 10s alternate;
+    animation-iteration-count: infinite;
+}
 /* keyframes */
 
+@keyframes welcomeAnime {
+    from{transform: translate3d(0,0,0);}
+    to{transform: translate3d(100px,0,0);}
+}
+
+@keyframes ImageHover {
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
+}
