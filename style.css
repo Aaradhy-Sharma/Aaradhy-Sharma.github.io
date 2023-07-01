@@ -1,0 +1,138 @@
+body{
+    background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:3rem;
+    margin-bottom: 3rem;
+    margin-left:6.5%;
+    margin-right:1.5%;
+}
+
+#navigationBar {
+    background-color: #C4A848;
+    border-radius: 1rem;
+    border-left: auto;
+    border-right: auto;
+    font-size: smaller;
+    display: flex;
+    justify-content: center;
+  }
+
+
+#navigationBar:hover{
+    animation: navBarHover 2s;
+    background-color: #b0922f;
+    border-color: red;
+    border-radius: 50px;
+
+}
+
+.navigationBarLinksList{
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigationBarLinks{
+    color:#996633;
+    margin: 0.75rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.navigationBarLinks:hover{
+    color:#800000;
+    text-decoration: underline;
+    text-shadow:#556B2F 1%;
+    animation: navBarLinksHover 3s;
+}
+
+.navigationBarLinks:active{
+    color: #556B2F;
+}
+
+.navigationBarLinks:visited{
+    color:#D35400;
+    text-decoration: underline;
+}
+
+#navigationBarNavigator{
+    color:#C4A848;
+
+}
+
+.navigationBarLinks::after {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    background-color:#996633;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .navigationBarLinks:hover::after {
+    display: block;
+  }
+  
+h1{
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section{
+    display: flex;
+    gap: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+article{
+    border-radius: 1rem;
+    display: 1;
+    padding-bottom: 1rem;
+}
+
+#articleImage{
+    max-width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.bannerContainer{
+    position: relative;
+    max-width: 100%;
+}
+
+.bannerText{
+    position: absolute;
+    top: 18%;
+    left: 70%;
+    right: -20%;
+    transform: translate(-50%,-20%);
+    color:beige;
+    text-align: right;
+    max-width: 90%;
+    font-size: bigger;
+    padding-left: 10px;
+    opacity: 70%;
+}
+
+.bannerText:hover{
+    outline: #D35400;
+    color:white;
+    
+
+}
+
+.bannerImage:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+/* keyframes */
+
