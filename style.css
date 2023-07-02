@@ -7,6 +7,43 @@ body{
     margin-right:1.5%;
 }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menuBox{
+    flex: 0 0 calc(33.33%-2rem);
+    margin-bottom: 2rem;
+    background-color:#f1e6ce;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 0.10rem solid #b0922f;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    box-shadow: 0 0 5px #996633;
+}
+
+.menuBox:hover{
+    box-shadow: 0 0 30px #996633;
+
+}
+
+.menuBox:hover #menuArticleParagraph{
+    animation: menuBoxHover 5s;
+    animation-duration: infinite;
+}
+
+
+
+
+#menuArticleParagraph{
+    color:olive;
+    font-size: 90%;
+}
+
 #navigationBar {
     background-color: #C4A848;
     border-radius: 1rem;
@@ -33,6 +70,7 @@ body{
     justify-content: center;
 
 }
+
 
 .navigationBarLinks{
     color:#996633;
@@ -80,7 +118,7 @@ body{
   }
   
 h1{
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -139,10 +177,17 @@ article{
     text-align: left;
 }
 
-#Welcome:hover{
+#Welcome{
     animation: welcomeAnime 10s alternate;
     animation-iteration-count: infinite;
 }
+
+h2{
+    font-size: 1.4rem;
+    color:#800000
+}
+
+
 /* keyframes */
 
 @keyframes welcomeAnime {
@@ -153,4 +198,11 @@ article{
 @keyframes ImageHover {
     from{transform: rotateY(0deg);}
     to{transform: rotateY(360deg);}
+}
+
+@keyframes menuBoxHover{
+    0%{color:#556B2F}
+    25%{color:olivedrab}
+    50%{color: rgb(83, 109, 30);}
+    100%{color: #4d6a1d;}
 }
