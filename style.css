@@ -24,6 +24,7 @@ main{
     align-items: center ;
     text-align: center;
     box-shadow: 0 0 5px #996633;
+    overflow: hidden;
 }
 
 .menuBox:hover{
@@ -36,10 +37,71 @@ main{
     animation-duration: infinite;
 }
 
+.menuBox:hover #menuArticleImage{
+    animation: menuBoxImgHover 5s;
+    animation-direction: alternate;
+    animation-duration: infinite;
+}
+
+.bookBox{
+    flex: 0 0 calc(33.33%-2rem);
+    margin-bottom: 2rem;
+    background-color:#f1e6ce;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 0.10rem solid #b0922f;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    box-shadow: 0 0 5px #996633;
+    overflow: hidden;
+}
+
+.bookBox:hover{
+    box-shadow: 0 5px 30px #996633;
+}
+
+.bookBox:hover #bookArticleParagraph{
+    animation: bookBoxHover 5s;
+    animation-duration: infinite;
+}
 
 
+.bookBox:hover #bookArticleImage{
+    animation: bookBoxImgHover 5s;
+    animation-direction: alternate;
+    animation-duration: infinite;
+}
+
+.main-article-links{
+    color:#a1852a;
+    text-decoration: none;
+}
+
+.main-article-links:hover{
+    color:#996633;
+    text-decoration: underline;
+    font-size: 101.5%;
+}
+
+/* .main-article-links:after{
+    content: attr(title);
+    display: none;
+    position: absolute;
+    background-color:#996633;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+} */
 
 #menuArticleParagraph{
+    color:olive;
+    font-size: 90%;
+}
+
+#bookArticleParagraph{
     color:olive;
     font-size: 90%;
 }
@@ -201,8 +263,25 @@ h2{
 }
 
 @keyframes menuBoxHover{
-    0%{color:#556B2F}
-    25%{color:olivedrab}
+    0%{color:#556B2F;}
+    25%{color:olivedrab;}
     50%{color: rgb(83, 109, 30);}
     100%{color: #4d6a1d;}
+}
+
+@keyframes menuBoxImgHover{
+    from{transform: scale(1);}
+    to{transform: scale(1.025);}
+}
+
+@keyframes bookBoxHover{
+    0%{color:#556B2F;}
+    25%{color:olivedrab;}
+    50%{color: rgb(83, 109, 30);}
+    100%{color: #4d6a1d;}
+}
+
+@keyframes bookBoxImgHover{
+    from{transform: scale(1);}
+    to{transform: scale(1.025);}
 }
